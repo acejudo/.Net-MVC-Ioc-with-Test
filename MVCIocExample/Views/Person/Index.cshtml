@@ -1,0 +1,30 @@
+﻿@model List<MVCIocExample.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Age</td>
+      <td>IsSome</td>
+    </tr>
+  </thead>
+  @foreach (var person in Model)
+  {
+    <tr>
+      <td>
+        @person.Name
+      </td>
+      <td>
+        @person.Age
+      </td>
+      <td>
+        @person.IsSome
+      </td>
+    </tr>
+  }
+</table>
